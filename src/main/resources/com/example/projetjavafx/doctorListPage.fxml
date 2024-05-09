@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="370.0" prefWidth="581.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetjavafx.DoctorListPage">
+   <children>
+      <TableView fx:id="table" layoutX="33.0" layoutY="45.0" prefHeight="280.0" prefWidth="514.0">
+          <columns>
+              <TableColumn fx:id="nameColumn" prefWidth="106.39998817443848" text="Name" />
+              <TableColumn fx:id="locationColumn" prefWidth="124.0" text="Location" />
+              <TableColumn fx:id="phoneColumn" minWidth="4.79998779296875" prefWidth="163.20001220703125" text="Phone" />
+              <TableColumn fx:id="priceColumn" minWidth="8.79998779296875" prefWidth="122.40005493164062" text="Price" />
+          </columns>
+      </TableView>
+   </children>
+</AnchorPane>
