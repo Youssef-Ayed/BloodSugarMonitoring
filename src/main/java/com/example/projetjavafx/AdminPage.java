@@ -52,6 +52,15 @@ public class AdminPage implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeTableColumns();
         refreshTable();
+        table.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                // Set text fields with row values
+                locationTextField.setText(newSelection.getLocation());
+                nameTextField.setText(newSelection.getName());
+                phoneTextField.setText(String.valueOf(newSelection.getPhone()));
+                priceTextField.setText(String.valueOf(newSelection.getPrice()));
+            }
+        });
     }
 
     private void refreshTable() {
